@@ -1,12 +1,4 @@
 function solution(s, n) {
-
-    return s.split("").map((el)=>{
-        if (el == " "){
-            return el;
-        }
-        const tmp = el.charCodeAt()
-        return el.toUpperCase().charCodeAt()+n > 90 
-            ? String.fromCharCode(tmp+n-26) 
-            : String.fromCharCode(tmp+n)
-    }).join('')
+    var chars = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXY                          "
+    return s.split('').map(e => chars[chars.indexOf(e)+n]).join('');
 }
