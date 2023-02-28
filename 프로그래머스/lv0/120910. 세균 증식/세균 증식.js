@@ -1,3 +1,6 @@
 function solution(n, t) {
-   return new Array(t).fill(n).reduce((a,b) => a*2,n)
+    for (let i = 0; i < t; i++) {
+        n *= 2
+    }
+    return n
 }
