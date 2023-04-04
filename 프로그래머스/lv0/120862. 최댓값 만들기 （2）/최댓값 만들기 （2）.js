@@ -1,9 +1,21 @@
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
 function solution(numbers) {
-    var answer = [];
-    for(let i = 0; i < numbers.length - 1; i++){
-        for(let j = i + 1; j < numbers.length; j++){
-            answer.push(numbers[i] * numbers[j]);
-        }
-    }
-    return Math.max(...answer);
+    const N = numbers.length;
+
+    numbers.sort((a,b) => a - b);
+
+    return Math.max(
+        numbers[N-1] * numbers[N-2],
+        numbers[0] * numbers[1]
+    )
 }
